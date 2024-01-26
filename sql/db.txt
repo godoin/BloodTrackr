@@ -1,0 +1,300 @@
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE blood_bank (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    telephone_num VARCHAR(15) NOT NULL,
+    region VARCHAR(50) NOT NULL,
+    time VARCHAR(50) NOT NULL,
+    blood_types VARCHAR(50) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    date DATE NOT NULL
+);
+
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    user_name VARCHAR(50) NOT NULL,
+    bank_id INT,
+    rating INT NOT NULL,
+    message TEXT,
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (bank_id) REFERENCES blood_bank(id)
+);
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('NATIONAL BLOOD CENTER (PRC TOWER)', '37 EDSA corner Boni Avenue, Mandaluyong City', '(02) 790-2300', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-02-15');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('National Blood Center', 'Bonifacio Drive, Port Area, Manila', '(02) 527-0861', 'Northern and Central Luzon', '7:30 AM to 5:00 PM', '["B", "O", "AB"]', 'No', '2024-02-18');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cebu City Red Cross Chapter', 'Osmeña Blvd., Cebu City', '032-253-4611', 'Visayas', '8:30 AM to 4:30 PM', '["A", "B", "O"]', 'Yes', '2024-03-05');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Iloilo Red Cross Chapter', 'Bonifacio Drive, Iloilo City', '033-337-2359', 'Visayas', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'No', '2024-03-10');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Misamis Oriental-Cagayan de Oro City Red Cross Chapter', 'Capitol Compound, Cagayan de Oro City', '(088) 856-8855', 'Mindanao', '8:00 AM to 5:00 PM', '["A", "AB", "O"]', 'Yes', '2024-03-20');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Alaminos Red Cross', 'WPDH Compound, Sabaro, Poblacion, Alaminos City', '075-5516356', 'Northern and Central Luzon', '9:30 AM to 4:30 PM', '["B", "O", "A"]', 'No', '2024-04-02');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Baguio Red Cross', '39 Harrison Road, Baguio City', '074-4424036', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-04-05');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bataan Red Cross', 'Capitol Drive (Back DPWH) Balanga City', '047-7914779', 'Northern and Central Luzon', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-04-10');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Benguet Red Cross', 'BeGHCompound, KM 5, La Trinidad, Benguet', '074-4222796', 'Northern and Central Luzon', '7:30 AM to 5:00 PM', '["A", "O", "B"]', 'Yes', '2024-02-25');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bulacan Red Cross', 'Brgy. Pagala, DRT highway, Baliwag Bulacan', '0923-303-6100', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'No', '2024-02-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bulacan-Malolos Red Cross', 'Capitol Center, Guinhawa, Malolos, Bulacan', '044-662-5922', 'Northern and Central Luzon', '9:00 AM to 4:00 PM', '["A", "AB", "O"]', 'Yes', '2024-03-08');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bulacan-Marilao Red Cross', 'Brgy. Patubig, Marilao Bulacan', '0932-487-8102', 'Northern and Central Luzon', '8:30 AM to 4:30 PM', '["O", "B", "A"]', 'No', '2024-03-15');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bulacan-San Rafael Red Cross', 'Brgy. Sampaloc, San Rafael Bulacan', '0932-913-3784', 'Northern and Central Luzon', '9:00 AM to 4:00 PM', '["A", "O", "AB"]', 'Yes', '2024-03-22');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cagayan Red Cross', 'Magallanes Street , Tuguegarao City', '078-846-2881', 'Northern and Central Luzon', '8:30 AM to 4:30 PM', '["B", "O", "AB"]', 'No', '2024-04-01');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Ifugao Red Cross', 'Capitol Compound, Lagawe, Ifugao', '0916-422-7670', 'Northern and Central Luzon', '7:30 AM to 5:00 PM', '["A", "O", "B"]', 'Yes', '2024-04-08');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Ilocos Norte Red Cross', 'Bonifacio Street (back Heroes Hall), Laoag City', '077-770-5615', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'No', '2024-04-15');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Ilocos Sur Red Cross', 'Burgos Street, Provincial Capitol Compound, Vigan City', '077-722-2684', 'Northern and Central Luzon', '9:30 AM to 4:30 PM', '["A", "O", "AB"]', 'Yes', '2024-04-22');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Isabela Red Cross', 'Calamangui 2nd, Ilagan, Isabela', '078-6223248', 'Northern and Central Luzon', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'Yes', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Kalinga Red Cross', 'DepEd Compound Brgy Bulanao, Tabuk, Kalinga', '0915-880-2243', 'Northern and Central Luzon', '9:00 AM to 4:00 PM', '["B", "O", "A"]', 'No', '2024-02-20');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('La Union-San Fernando Red Cross', 'Don Pablo Campos Bldg., Widdoes Street, Barangay 2, City of San Fernado', '072-7005161', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-02-25');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Nueva Vizcaya Red Cross', 'Old Capitol Compound, Llanera Street, Cabanatuan City', '044-4631280', 'Northern and Central Luzon', '9:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-03-05');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Olongpao Red Cross', 'Old Hospital Compound, East Tapinac, Olongapo City', '047-222-2181', 'Northern and Central Luzon', '8:30 AM to 4:30 PM', '["B", "O", "A"]', 'Yes', '2024-03-10');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Pampanga Red Cross', 'Capitol Compound, Sto.Niño. City of San Fernando Chapter Office located at Regional Government Center Maimpis, City of San Fernando, Pampanga', '045-961-4117', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'No', '2024-03-15');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Pampanga-Angeles Red Cross', 'Capitol Compound, Sto.Niño, City of San Fernando, Pampanga', '045-9614117', 'Northern and Central Luzon', '9:00 AM to 4:00 PM', '["A", "AB", "O"]', 'Yes', '2024-03-20');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Pangasinan-Dagupan Red Cross', 'Herrero-Perez Blvd., Dagupan City', '075-6322472', 'Northern and Central Luzon', '9:30 AM to 4:30 PM', '["A", "O", "B"]', 'No', '2024-03-25');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Pangasinan-Urdaneta Red Cross', 'Pangasinan', '075-6322472', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-04-02');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Quirino Red Cross', 'Capitol Hills, Cabarroguis, Quirino', '078-692-5054', 'Northern and Central Luzon', '8:00 AM to 5:00 PM', '["A", "AB", "O"]', 'Yes', '2024-02-16');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Santiago Red Cross', 'City Hall Compound, San Andres, Santiago City, Isabela', '078-692-5054', 'Northern and Central Luzon', '7:30 AM to 5:00 PM', '["A", "O", "AB"]', 'Yes', '2024-04-10');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Tarlac Red Cross', 'Capitol Site, San Vicente, Tarlac City', '045-6114008', 'Northern and Central Luzon', '8:30 AM to 4:30 PM', '["B", "O", "AB"]', 'No', '2024-04-15');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Zambales Red Cross', 'DSWD Compound, Brgy Palanginan, Iba, Zambales', '047-811-7214', 'Northern and Central Luzon', '9:00 AM to 4:00 PM', '["A", "O", "B"]', 'Yes', '2024-04-22');
+
+-- The following entries are for NCR (National Capital Region)
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Caloocan Red Cross', '7th Ave. Grace Park, Caloocan City', '02-3660380', 'National Capital Region', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-02-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Makati Red Cross', 'Johnny Air Building 55 B Dian St. Cor Gil Puyat Ave. Brgy. Palanan Makati', '403-6267', 'National Capital Region', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'Yes', '2024-03-08');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Muntinlupa Red Cross', 'Red Cross Center Centennial Lane FILINVEST, Alabang', '850-6813', 'National Capital Region', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-04-05');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Pasay Red Cross', '2354 CAA Compound, Aurora Blvd. (old Tramo), Pasay City', '854-2748', 'National Capital Region', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Quezon Red Cross', 'Quezon City Hall Compound, Kalayaan Avenue, Diliman, Quezon City', '433-6568, 433-2152', 'National Capital Region', '9:00 AM to 4:00 PM', '["A", "O", "B"]', 'Yes', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Rizal-Main Red Cross', 'Shaw Blvd., Pasig City', '631-3993', 'National Capital Region', '8:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Rizal-East Red Cross', '2nd Floor Multipurpose Bldg, Brgy Muzon, Taytay Rizal', '998-4867', 'National Capital Region', '8:00 AM to 3:00 PM', '["A", "B", "O"]', 'Yes', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Valenzuela Red Cross', 'Dahlia Street, Villa Teresa Subdivision, Marulas, Valenzuela City', '432-0273', 'National Capital Region', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Batangas Red Cross', 'Kumintang Ibaba, Capitol Site, Batangas City', '043 430 5712', 'Southern Tagalog', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'Yes', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cavite Red Cross', 'Samonte Park, Cavite City', '', 'Southern Tagalog', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'No', '2024-04-11');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cavite-Da Smarinas Red Cross', 'Units 2 and 3, Amada building, Aguinaldo Highway, Barangay Zone IV, Dasmarinas, Cavite', '046-431-0562', 'Southern Tagalog', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Laguna Red Cross', 'Units 2 and 3, Amada building, Aguinaldo Highway, Barangay Zone IV, Dasmarinas, Cavite', '046-402-6267', 'Southern Tagalog', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'Yes', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Laguna-Calamba Red Cross', '2nd Floor, PRC Laguna Chapter Building J. de Leon St. corner P. Guevara Avenue, Santa Cruz, Laguna', '0939-5207898', 'Southern Tagalog', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Laguna-Sta. Rosa Red Cross', 'Dr. Jose P. Rizal Memorial district Hospital Compound Brgy. Bucal, Calamba City', '(049) 501-1929', 'Southern Tagalog', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'Yes', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Laguna-Siniloan Red Cross', '2nd Floor, Municipal Government of Siniloan - Multi-Purpose Building, L. de Leon St., Brgy. Wawa, Siniloan, Laguna', '(049) 521-3488', 'Southern Tagalog', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Occidental Mindoro Red Cross', 'M. H. del Pilar Street, Brgy Siete, San Jose Occidental Mindoro', '043-491-4383', 'Southern Tagalog', '9:00 AM to 4:00 PM', '["A", "O", "AB"]', 'Yes', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Palawan Red Cross', 'H. Mendoza Street, Old City Hall Site, Puerto Princesa City', '048-433-6362', 'Southern Tagalog', '8:30 AM to 4:30 PM', '["B", "O", "A"]', 'No', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Quzon-Lucena Red Cross', 'Victoria Street, Capitol Compound, Lucena City', '042-660-4460', 'Southern Tagalog', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-04-11');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Romblon Red Cross', 'Capitol Site Brgy. Capaclan, Romblon, Romblon', '0908-813-6386', 'Southern Tagalog', '9:30 AM to 4:30 PM', '["A", "O", "B"]', 'No', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('San Pablo Red Cross', 'Rizal Avenue, San Pablo City', '049-562-4025', 'Southern Tagalog', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-04-18');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Albay-Legaspi Red Cross', 'Gov. Locsin cor. Fr. JL Bates St., Albay Legaspi', '0977-146-6761', 'Bicol', '9:00 AM to 4:00 PM', '["A", "O", "AB"]', 'Yes', '2024-04-25');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Camarines Sur Red Cross', 'Panganiban Drive, Naga City', '054-4739-431', 'Bicol', '8:30 AM to 4:30 PM', '["B", "O", "A"]', 'No', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Catanduanes Red Cross', 'EBMC Compound, San Isidro Village, Virac, Catanduanes', '0917-806-8528', 'Bicol', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Masbate Red Cross', 'Capitol Road, Masbate City', '056-333-2331', 'Bicol', '8:30 AM to 4:30 PM', '["A", "B", "O"]', 'Yes', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Aklan Red Cross', 'Dr. RST Mem. Hospital Compound, F. Quimpo Street, Kalibo, Aklan', '036-2684761', 'Visayas', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'No', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bohol Red Cross', 'J.A. Clarin Street, Provincial Capitol Compound, Tagbilaran City', '038-5019175', 'Visayas', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Capiz Red Cross', 'Provincial Park, Macopa Street, Roxas City', '036-6211125', 'Visayas', '8:30 AM to 4:30 PM', '["B", "O", "A"]', 'No', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cebu-Bogo Red Cross', 'Cebu City', '0916-398-0069', 'Visayas', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'Yes', '2024-04-11');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cebu-Mandau Red Cross', 'Cebu City Red Cross Chapter, Osmeña Blvd. Cebu City 6000', '032-253-4611', 'Visayas', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Eastern Samar Red Cross', 'Capitol Site, Alang-alang, Borongan, Eastern Samar 6800', '055-261-3528', 'Visayas', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'Yes', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Guimaras Red Cross', 'Museo de Guimaras, San Miguel Jordan, Guimaras', '033- 581-2020', 'Visayas', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Lapu-Lapu Red Cross', 'Doors 4 and 5 Hoopsdome Bldg, Lapu-Lapu City', '0917-709-3382', 'Visayas', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'Yes', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Leyte Red Cross', 'Magsaysay Blvd. corner M.H. del Pilar Blvd., Tacloban City', '053-321-3330', 'Visayas', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'No', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Negros Occidental-Bacolod Red Cross', '10th Street, Lacson Capitol Subd., Capitol Shopping Center, Bacolod City', '034-4349286', 'Visayas', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'Yes', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Negros Oriental Red Cross', 'Legaspi Street, Dumaguete City', '035-2252835', 'Visayas', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-04-11');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Northern Samar Red Cross', 'Capitol Site, Catarman, Northern Samar', '055-2518279', 'Visayas', '9:30 AM to 4:30 PM', '["B", "O", "A"]', 'Yes', '2024-04-18');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Ormoc Red Cross', 'San Pablo Street, Ormoc City', '053-2552911', 'Visayas', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-04-25');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Passi Red Cross', 'New Town Site, Brgy Sablongon, Passi City', '0997-229-5572', 'Visayas', '9:00 AM to 4:00 PM', '["A", "O", "AB"]', 'No', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Southern Leyte Red Cross', 'Tomas Oppus Street, Brgy. Abgao, Maasin City, Southern Leyte', '053-381-0563', 'Visayas', '8:30 AM to 4:30 PM', '["B", "O", "A"]', 'Yes', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Agusan Del Norte-Butuan Red Cross', 'Capitol Drive, Butuan City', '085-342-8521', 'Mindanao', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Agusan Del Sur Red Cross', 'Government Center, Patin-ay, Properidad, Agusan del Sur', '085-3437195', 'Mindanao', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Bukidnon Red Cross', 'Capitol Site, Malaybalay City, Bukidnon', '088-2213480', 'Mindanao', '8:30 AM to 4:30 PM', '["A", "B", "O"]', 'Yes', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Cotabato Red Cross', 'Veterans Ave., PC Hill, Cotabato City', '064-4212274', 'Mindanao', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'No', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Davao Red Cross', 'Manuel Roxas Avenue, Davao City', '082-2240217', 'Mindanao', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'Yes', '2024-04-11');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Davao Del Norte Red Cross', 'Government Center, Mankilain, Tagum, Davao', '084-217-3473', 'Mindanao', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'Yes', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Davao Del Sur Red Cross', 'Quezon Avenue, Digos City, Davao del Sur', '082-5532832', 'Mindanao', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Davao Oriental Red Cross', 'Hospital Drive, Matiao, Mati, Davao Oriental', '087-3884022', 'Mindanao', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('General Santos Red Cross', 'City Hall Compound, General Santos City', '083-5524323', 'Mindanao', '9:00 AM to 4:00 PM', '["B", "O", "A"]', 'No', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Gingoog Red Cross', 'Misamis Oriental Hospital Compound, Gingoog City', '088-42-7337', 'Mindanao', '8:30 AM to 4:30 PM', '["AB", "O", "B"]', 'Yes', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Iligan Red Cross', 'Don Pedro Street, Celdren Avenue, Rosario Heights, Iligan City', '063-223-1065', 'Mindanao', '9:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('South Cotabato Red Cross', 'Mabini Street, Koronadal City, South Cotabato', '083-228-2414', 'Mindanao', '8:00 AM to 3:00 PM', '["B", "O", "A"]', 'Yes', '2024-04-11');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Sultan Kudarat Red Cross', 'Bonifacio Street (beside PNP & fronting TC Health Office), Tacurong City', '064-2006652', 'Mindanao', '9:30 AM to 4:30 PM', '["AB", "O", "B"]', 'No', '2024-04-18');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Sulu Red Cross', 'Marina Street Municipal Compound, Jolo, Sulu', '08-5341891', 'Mindanao', '8:30 AM to 4:30 PM', '["A", "O", "AB"]', 'Yes', '2024-04-25');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Surigao Del Norte Red Cross', 'Parrucho Street Cor., Magallanes Street, Surigao City', '086-2324065', 'Mindanao', '9:00 AM to 4:00 PM', '["B", "O", "A"]', 'No', '2024-02-29');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Surigao Del Sur Red Cross', 'Capitol Hills, Tandag, Surigao del Sur', '086-2113191', 'Mindanao', '8:00 AM to 3:00 PM', '["AB", "O", "B"]', 'Yes', '2024-03-07');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Tangub Red Cross', 'City Hall Compound, Tangub City', '088-3953162', 'Mindanao', '9:30 AM to 4:30 PM', '["A", "O", "AB"]', 'No', '2024-03-14');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Zamboanga Red Cross', 'Rizal Street, Pettit Barracks, Zamboanga City', '062-9921622', 'Mindanao', '8:30 AM to 4:30 PM', '["B", "O", "A"]', 'Yes', '2024-03-21');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Zamboanga Del Norte Red Cross', 'Capitol Tourism Complex, Dipolog City', '065-212-3566', 'Mindanao', '9:00 AM to 4:00 PM', '["AB", "O", "B"]', 'No', '2024-03-28');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Zamboanga Del Sur Red Cross', 'Provincial Government Center, Barangay Dau, Pagadian City', '062-214-1717', 'Mindanao', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-04-04');
+
+INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
+('Zamboanga Sibugay Red Cross', 'Climaco Street, Veterans Village, Ipil, Sibugay, Zamboanga del Sur', '062-333-5720', 'Mindanao', '9:30 AM to 4:30 PM', '["B", "O", "A"]', 'No', '2024-04-11');
