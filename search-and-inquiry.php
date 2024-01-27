@@ -21,7 +21,7 @@
         (time LIKE '%$timeFilter%')";
 
     $result = mysqli_query($conn, $query);
-}
+  }
 
   $title = 'Search and Inquiry';
   $contentView = 'views/_search-and-inquiry.php';

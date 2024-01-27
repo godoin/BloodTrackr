@@ -42,7 +42,7 @@
                 </div>
             </div>
             <div class="actions">
-                <button type="submit" class="primary">Apply Filters</button>
+                <button type="submit" class="secondary">Apply Filters</button>
             </div>
         </form>
     </section>

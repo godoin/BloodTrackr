@@ -29,7 +29,7 @@
                     </div>
                     <div class="field input">   
                         <label for="confirm_password">Confirm Password*</label>
-                        <input id="confirm_password" type="confirm_password" class="form-control" name="confirm_password" required autocomplete="confirm_password">
+                        <input id="confirm_password" type="password" class="form-control" name="confirm_password" required autocomplete="confirm_password">
                     </div>
                     <div class="redirect">
                         <span class="text">Already have an account?</span>

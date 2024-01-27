@@ -301,3 +301,9 @@ INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types
 
 INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
 ('Zamboanga Sibugay Red Cross', 'Climaco Street, Veterans Village, Ipil, Sibugay, Zamboanga del Sur', '062-333-5720', 'Mindanao', '9:30 AM to 4:30 PM', '["B", "O", "A"]', 'No', '2024-04-11');
+
+INSERT INTO users (email, username, password, home_address, blood_type, image_path)
+VALUES ('johndoe@example.com', 'John', '123', '123 Main St', 'O', 'assets/uploads/user_img.jpg');
+
+INSERT INTO reviews (user_id, user_name, bank_id, rating, message)
+VALUES (1, 'John', 1, 5, 'This is a great blood bank! Highly recommended.');

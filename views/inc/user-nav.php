@@ -14,7 +14,7 @@
         <ul class="nav">
             <a href="user-index.php">Home</a>
             <a href="search-and-inquiry.php">Search and Inquiry</a>
-            <a href="">Review and Feedback</a>
+            <a href="review-and-feedback.php">Review and Feedback</a>
             <a href="">Notifications Center</a>
         </ul>
         <div class="user" id="user-btn">

@@ -29,6 +29,10 @@
   --green-700: #15803d;
   --green-900: #14532d;
   --lime-50: #f7feef;
+  --yellow-300: #fcd34d;
+  --yellow-500: #f59e0b;
+  --yellow-700: #b45309;
+  --yellow-900: #78350f;
   --white: #fff;
   --black: #000;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
@@ -53,14 +57,16 @@ a {
 }
 
 button {
-  display: flex:
+  display: flex;
   gap: 1em;
   padding: 0.8em 2em;
   font-size: 1.5em;
   font-weight: 500;
   border: none;
   cursor: pointer;
+  text-align: center;
   border-radius: 0.5em;
+  
   transition: all 0.3s ease;
 }
 
@@ -179,7 +185,7 @@ button.secondary:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 4em;
+  gap: 6em;
 }
 
 .header .navbar .nav a {
@@ -433,6 +439,14 @@ main .pubmats .pubmat img {
 
 .hero .hero-content form .details .actions {
   display: grid;
+  width: 100%;
+}
+
+.hero .hero-content form .details .actions button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Search and Inquiry */
@@ -475,7 +489,7 @@ main .pubmats .pubmat img {
 .search-container .filters .filters-header header {
   font-size: 2em;
   font-weight: 700;
-  color var(--red-950);
+  color: var(--red-950);
 }
 
 .search-container .filters .filters-group .filters {
@@ -525,7 +539,7 @@ main .pubmats .pubmat img {
 .search-container .search .search-header header {
   font-size: 2em;
   font-weight: 700;
-  color var(--red-950);
+  color: var(--red-950);
 }
 
 .search-container .search .search-wrapper {
@@ -754,3 +768,297 @@ main .pubmats .pubmat img {
   border-radius: 100%;
   font-size: 5em;
 }
+
+/* Reviews */
+.reviews-container {
+  margin-top: 88px;
+  position: relative;
+  min-height: calc(100vh - 116px);
+  padding: 0 2em;
+  display: flex;
+}
+
+.reviews-container .search {
+  border: 1px solid var(--gray-300);
+  border-top: 0;
+  border-bottom: 0;
+  flex-basis: 15%;
+}
+
+.reviews-container .content-container {
+  flex-basis: 85%;
+  width: 100%;
+  border-right: 1px solid var(--gray-300);
+}
+
+/* Search */
+.reviews-container .search .search-header {
+  padding: 1.5em 2.2em;
+  border-bottom: 1px solid var(--gray-300);
+  display: flex;
+  justify-content: justify-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.reviews-container .search .search-header .fa-magnifying-glass {
+  color: var(--red-950);
+  font-size: 2.5em;
+}
+
+.reviews-container .search .search-header header {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--red-950);
+}
+
+.reviews-container .search .filters-group .filters {
+  border: none;
+}
+
+.reviews-container .search .filters-group .filters .filter {
+  padding: 1.5em 2.2em;
+  border-bottom: 1px solid var(--gray-300);
+  border-left: 0;
+  border-right: 0;
+  display: grid;
+  gap: 0.5em;
+}
+
+.reviews-container .search .filters-group .filters .filter label {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--gray-700);
+}
+
+.reviews-container .search .filters-group .filter .form-control {
+  width: 100%;
+}
+
+.reviews-container .search .filters-group .filter .form-control,
+.reviews-container .search .filters-group .filter .form-control select
+.reviews-container .search .filters-group .filter .form-control select option {
+  padding: 0.8em 0.5em;
+  font-size: 1.5em;
+}
+
+.reviews-container .search .filters-group .actions {
+  padding: 1.5em 2.2em;
+  display: flex;
+  min-width: 100%;
+}
+
+.reviews-container .search .filters-group .actions button {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-width: inherit;
+}
+
+/* Reviews Content */
+.reviews-container .content-container .search-header {
+  padding: 1.7em 2.2em;
+  border-bottom: 1px solid var(--gray-300);
+  display: flex;
+  justify-content: justify-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.reviews-container .content-container .search-header header {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--red-950);
+}
+
+.reviews-container .content-container .content-group {
+  padding: 2em;
+  display: grid;
+  gap: 3em;
+}
+
+.reviews-container .content-container .content-group .bank-details {
+  display: grid;
+  gap: 2em;
+}
+
+.reviews-container .content-container .content-group .bank-details header {
+  font-size: 5em;
+  color: var(--red-500);
+  font-weight: 700;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: justify-start;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .detail {
+  display: grid;
+  gap: 1em;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .detail .group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .detail .group .icon {
+  font-size: 2.5em;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .detail .group .text-group {
+  display: grid;
+  gap: 0.5em;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .detail .group .text-group > * {
+  font-size: 2em;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .blood-types {
+  display: grid;
+  justify-content: justify-end;
+  align-items: right;
+  text-align: right;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .blood-types .title {
+  font-size: 2em;
+  color: var(--red-500);
+  font-weight: 700;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .blood-types .blood-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  justify-content: justify-end;
+}
+
+.reviews-container .content-container .content-group .bank-details .details-section .blood-types .blood {
+  padding: 0em 0.5em;
+  max-width: 5em;
+  border: 1px solid var(--red-500);
+  color: var(--red-500);
+  font-size: 4em;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-container .reviews {
+  display: grid;
+  justify-content; justify-start;
+  align-items: center;
+}
+
+.reviews-container .reviews .reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.reviews-container .reviews .reviews-header header {
+  padding: 1em 0;
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.reviews-container .reviews .review {
+  display: flex;
+  gap: 0.5em;
+  padding: 1em 0;
+  min-width: 100%;
+}
+
+.reviews-container .reviews .review .user {
+  flex-basis: 20%;
+  display: flex;
+  gap: 1em;
+}
+
+.reviews-container .reviews .review .review-message {
+  flex-basis: 80%;
+}
+
+/* User Detail*/
+.reviews-container .reviews .review .user .user-icon {
+  width: 2em;
+  height: 2em;
+  font-size: 4em;
+  background-color: var(--red-500);
+  color: var(--white);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-container .reviews .review .user .user-group {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.reviews-container .reviews .review .user .user-group .date {
+  font-size: 1.8em;
+  color: var(--gray-500);
+  font-weight: 500;
+}
+
+.reviews-container .reviews .review .user .user-group .username {
+  font-size: 2em;
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+/* Review Message */
+.reviews-container .reviews .reviews-section {
+  display: grid;
+  gap: 1em;
+}
+
+.reviews-container .reviews .reviews-section .no-reviews {
+  font-size: 2em;
+  margin-top: 1em;
+  color: var(--gray-900);
+}
+
+.reviews-container .reviews .review .review-message {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.reviews-container .reviews .review .review-message .stars-container {
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.reviews-container .reviews .review .review-message .stars-container .star {
+  font-size: 2em;
+  color: var(--yellow-500);
+}
+
+.reviews-container .reviews .review .review-message .stars-container .rating {
+  font-size: 2em;
+  color: var(--yellow-500);
+  font-weight: 700;
+}
+
+.reviews-container .reviews .review .review-message .description {
+  font-size: 1.8em;
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
