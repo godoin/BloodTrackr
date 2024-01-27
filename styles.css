@@ -138,7 +138,12 @@ button.secondary:hover {
   background-color: var(--red-950);
   border-bottom: 2px solid var(--red-500);
   color: var(--white);
-};
+}
+
+.header .navbar .nav-message {
+  font-size: 3em;
+  font-weight: 500;
+}
 
 .header .navbar .site-logo {
   display: flex;
@@ -148,7 +153,7 @@ button.secondary:hover {
 }
 
 .header .navbar .site-logo .logo-wrapper {
-  max-width: 5em;
+  max-width: 9em;
 }
 
 .header .navbar .site-logo img {
@@ -157,8 +162,12 @@ button.secondary:hover {
 }
 
 .header .navbar .site-logo .logo-group .logo-title { 
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 700;
+}
+
+.header .navbar .site-logo .logo-group .logo-desc {
+  font-size: 1.5em;
 }
 
 .header .navbar .navbar-message {
