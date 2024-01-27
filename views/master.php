@@ -22,7 +22,7 @@ include_once 'core/functions.php';
 
 <body>
 
-  <?php include('views/inc/header.php') ?>
+  <?php include('views/inc/nav.php') ?>
   <?php include('views/inc/modals.php') ?>
   <?php include($contentView) ?>
 

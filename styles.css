@@ -8,30 +8,22 @@
   list-style: none;
   font-family: "Inconsolata", sans-serif;
   overflow-x: hidden;
+  font-size: 0.8rem;
 }
 
 /* Global */
 :root {
   --bg-color: #222327;
-  --text-color: #efe8e8;
-  --red-color: red;
-  --blue-color: blue;
-  --green-color: green;
-  --yellow-color: yellow;
-  --dark-color: #000;
-  --grey-color: #d4d4d4;
-  --grey-color-1: #929292;
-  --grey-color-2: #eaeaea;
-  --breadcrumbs-color: #929292;
-  --rating-color: #ff9529;
-  --btn-color: #b8b8b8;
-  --green-color: #32cd32;
-  --main-color: #5e17eb;
-  --main-color-1: #40119d;
-  --body-color: #707070;
-  --hover-color: #e9dfdf;
-  --light-color: #fff;
-  --red-color: rgb(202, 89, 69);
+  --gray-300: #d1d5db;
+  --gray-500: #6b7280;
+  --gray-900: #030712;
+  --red-300: #fca5a5;
+  --red-500: #ef4444;
+  --red-900: #7f1d1d;
+  --red-950: #450a0a;
+  --lime-50: #f7feef;
+  --white: #fff;
+  --black: #000;
   --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.3);
   --border: 0.2rem solid rgba(0, 0, 0, 0.1);
   --outline: 0.1rem solid rgba(0, 0, 0, 0.1);
@@ -45,5 +37,75 @@ html {
 
 body {
   position: relative;
-  background-color: var(--light-color);
+}
+
+button {
+  display: flex:
+  gap: 1em;
+  padding: 1em 2.5em;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+}
+
+button.primary {
+  background-color: var(--red-500);
+  color: var(--white);
+}
+
+button.primary:hover {
+  background-color: var(--red-300);
+}
+
+/* Navigation Header */
+.header {
+  min-width: 100vw;
+}
+
+.header .bg-lime {
+  display: block;
+  background-Color: var(--lime-50);
+  height: 2em;
+}
+
+.header .nav {
+  display: flex;
+  width: 100%;
+  height: 9em;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2em;
+  padding-right: 2em;
+  background-color: var(--red-950);
+  border-bottom: 2px solid var(--red-500);
+  color: var(--white);
+};
+
+.nav .site-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav .site-logo .logo-wrapper {
+  max-width: 5em;
+}
+
+.nav .site-logo img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.nav .site-logo .logo-group .logo-title { 
+  font-size: 2em;
+  font-weight: 700;
+}
+
+.nav .nav-message {
+  font-size: 2.5em;
+  font-weight: 700;
 }
