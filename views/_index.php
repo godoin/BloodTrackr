@@ -7,7 +7,9 @@
                 <header>TRACK THE LATEST <br> BLOOD BANKS</header>
                 <p class="description">Discover nearby blood donation centers with real-time availability. Simplifying blood-matching for timely access. Join us in saving lives! <span class="hashtag">🩸 #BloodTrackr</span></p>
                 <div class="redirect">
-                    <button class="primary">Get Started</button>
+                    <a href="login.php">
+                        <button class="primary">Get Started</button>
+                    </a>
                 </div>
             </div>
             <img src="assets/images/logo.png" alt="BloodTrackr Logo" class="logo">

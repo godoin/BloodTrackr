@@ -13,7 +13,9 @@
         </div>
         <div class="nav-message">BE A HERO AND DONATE BLOOD NOW</div>
         <div class="redirect">
-            <button class="primary">Login</button>
+            <a href="login.php">
+                <button class="primary">Login</button>
+            </a>
         </div>
     </ul>
 </div>

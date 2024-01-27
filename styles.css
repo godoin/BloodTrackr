@@ -16,6 +16,7 @@
   --bg-color: #222327;
   --gray-300: #d1d5db;
   --gray-500: #6b7280;
+  --gray-700: #374151;
   --gray-900: #030712;
   --red-300: #fca5a5;
   --red-500: #ef4444;
@@ -38,6 +39,10 @@ html {
 body {
   position: relative;
   min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
 }
 
 button {
@@ -134,7 +139,7 @@ button.primary:hover {
 /* Intro */
 main .intro {
   position: relative;
-  height: 815px;
+  height: calc(100vh - 88px);
   background-image: url('assets/images/background.jpg'); 
   background-size: cover;
   background-position: center;
@@ -146,7 +151,7 @@ main .intro .intro-content {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 815px;
+  height: calc(100vh - 88px);
   background-color: white;
   opacity: 0.9;
   display: grid;
@@ -219,4 +224,107 @@ main .pubmats .pubmat img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Login and Register Page */
+.hero {
+  position: relative;
+  height: calc(100vh - 116px);
+  background-image: url('assets/images/background.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero .hero-content {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: calc(100vh - 116px);
+  background-color: white;
+  opacity: 0.9;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  padding: 4em 2em;
+}
+
+.hero .hero-content form {
+  background-color: var(--white);
+  padding: 2em;
+  min-width: 15em;
+  border: 1px solid var(--gray-300);
+}
+
+.hero .hero-content form .details {
+  display: grid;
+  gap: 3em;
+  font-size: 1.2em;
+  color: var(--gray-500);
+}
+
+.hero .hero-content form .details .desc {
+  display: grid;
+  gap: 0.5em;
+}
+
+.hero .hero-content form .details .desc .title {
+  font-size: 2.5em;
+  color: var(--red-950);
+  font-weight: 800;
+}
+
+.hero .hero-content form .details .desc .description {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: var(--gray-700);
+}
+
+.hero .hero-content form .details .fields {
+  display: grid;
+  gap: 1.5em;
+}
+
+.hero .hero-content form .details .fields .field {
+  display: grid;
+  gap: 0.3em;
+}
+
+.hero .hero-content form .details .fields .field label {
+  font-size: 1.5em;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+
+.hero .hero-content form .details .fields .field input {
+  padding: 0.8em 0.5em
+}
+
+.hero .hero-content form .details .redirect {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.hero .hero-content form .details .redirect .text {
+  color: var(--gray-700);
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.hero .hero-content form .details .redirect a {
+  color: var(--red-500);
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.hero .hero-content form .details .redirect a:hover {
+  text-decoration: underline;
+}
+
+.hero .hero-content form .details .actions {
+  display: grid;
 }
