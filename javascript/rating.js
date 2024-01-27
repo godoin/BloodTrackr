@@ -17,7 +17,6 @@ ratingButton.addEventListener('click', () => {
 });  
 
 // Star Clicks
-// Star Clicks
 radioInputs.forEach(input => {
     input.addEventListener('change', () => {
         switch (input.value) {
