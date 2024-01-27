@@ -66,7 +66,6 @@ button {
   cursor: pointer;
   text-align: center;
   border-radius: 0.5em;
-  
   transition: all 0.3s ease;
 }
 
@@ -257,6 +256,7 @@ main .intro {
 }
 
 main .intro .intro-content {
+  overflow: hidden;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -1242,9 +1242,109 @@ main .pubmats .pubmat img {
 .bank-map .map {
   flex-basis: 80%;
 }
-
+/* Map */
 /* .bank-map iframe {
   width: 100%;
   height: 300;
   border: 0; 
 } */
+
+/* Bank Details */
+.bank-map .bank-details {
+  padding: 2em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.bank-map .bank-details .details-section {
+  display: grid;
+  gap: 2em;
+}
+
+.bank-map .bank-details header {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--red-500);
+}
+
+.bank-map .bank-details .details-section .detail {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.bank-map .bank-details .details-section .detail .group {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.bank-map .bank-details .details-section .detail .group .icon {
+  font-size: 2em;
+}
+
+.bank-map .bank-details .details-section .detail .group .text-group {
+  display: grid;
+  gap: 0.5em;
+}
+
+.bank-map .bank-details .details-section .detail .group .text-group > * {
+  font-size: 1.7em;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.bank-map .bank-details .details-section .blood-types {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.bank-map .bank-details .details-section .blood-types .title {
+  font-size: 2em;
+  color: var(--red-500);
+  font-weight: 700;
+}
+
+.bank-map .bank-details .details-section .blood-types .blood-group {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.bank-map .bank-details .details-section .blood-types .blood {
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--red-500);
+  color: var(--red-500);
+  font-size: 3em;
+  font-weight: 900;
+}
+
+.bank-map .bank-details .map-functions {
+  display: grid;
+  gap: 1em;
+}
+
+.bank-map .bank-details .map-functions header {
+  font-size: 2em;
+}
+
+.bank-map .bank-details input {
+  display: flex;
+  gap: 1em;
+  padding: 0.8em 2em;
+  font-size: 1.5em;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 0.5em;
+  transition: all 0.3s ease;
+  border: 1px solid var(--gray-300);
+  background-color: var(--white);
+}
+
+.bank-map .bank-details input:hover {
+  background-color: var(--gray-300);
+}
