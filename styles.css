@@ -14,6 +14,8 @@
 /* Global */
 :root {
   --bg-color: #222327;
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
   --gray-300: #d1d5db;
   --gray-500: #6b7280;
   --gray-700: #374151;
@@ -344,7 +346,7 @@ main .pubmats .pubmat img {
 }
 
 .hero .hero-content form .details .fields .field input {
-  padding: 0.8em 0.5em
+  padding: 0.8em 0.5em;
 }
 
 .hero .hero-content form .details .redirect {
@@ -372,4 +374,182 @@ main .pubmats .pubmat img {
 
 .hero .hero-content form .details .actions {
   display: grid;
+}
+
+/* Search and Inquiry */
+.search-container {
+  position: relative;
+  min-height: calc(100vh - 116px);
+  padding: 0 2em;
+  display: flex;
+}
+
+.search-container .filters {
+  border: 1px solid var(--gray-300);
+  border-top: 0;
+  border-bottom: 0;
+  flex-basis: 15%;
+}
+
+.search-container .search {
+  flex-basis: 85%;
+  width: 100%;
+  border-right: 1px solid var(--gray-300);
+}
+
+/* Filters */
+.search-container .filters .filters-header {
+  padding: 1.5em 2.2em;
+  border-bottom: 1px solid var(--gray-300);
+  display: flex;
+  justify-content: justify-start;
+  align-items: center;
+  gap: 1em;
+}
+
+.search-container .filters .filters-header .fa-filter {
+  color: var(--red-950);
+  font-size: 2.5em;
+}
+
+.search-container .filters .filters-header header {
+  font-size: 2em;
+  font-weight: 700;
+  color var(--red-950);
+}
+
+.search-container .filters .filters-group .filters {
+  border: none;
+}
+
+.search-container .filters .filters-group .filters .filter {
+  padding: 1.5em 2.2em;
+  border-bottom: 1px solid var(--gray-300);
+  border-left: 0;
+  border-right: 0;
+  display: grid;
+  gap: 0.5em;
+}
+
+.search-container .filters .filters-group .filters .filter label {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: var(--gray-700);
+}
+
+.search-container .filters .filters-group .filters .filter input {
+  padding: 0.8em 0.5em;
+}
+
+.search-container .filters .filters-group .actions {
+  padding: 1.5em 2.2em;
+  display: flex;
+  min-width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container .filters .filters-group .actions button {
+  min-width: inherit;
+}
+
+/* Search Content */
+.search-container .search .search-header {
+  padding: 1.7em 2.2em;
+  border-bottom: 1px solid var(--gray-300);
+}
+
+.search-container .search .search-header header {
+  font-size: 2em;
+  font-weight: 700;
+  color var(--red-950);
+}
+
+.search-container .search .search-wrapper {
+  width: inherit;
+  padding: 1em;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.search-container .search .search-wrapper .search-content {
+  padding: 1.5em;
+  min-width: 15em;
+  color: var(--gray-900);
+  display: grid;
+  gap: 2em;
+  border: 1px solid var(--gray-300);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.search-container .search .search-wrapper .search-content:hover {
+  transform: scale(1.01);
+}
+
+.search-container .search .search-wrapper .search-content .bank-name {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: inherit;
+}
+
+.search-container .search .search-wrapper .search-content .address {
+  display: grid;
+  gap: 0.1em;
+  color: inherit;
+  font-size: 1.5em;
+}
+
+.search-container .search .search-wrapper .search-content .address .location,
+.search-container .search .search-wrapper .search-content .address .region {
+  font-size: inherit;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.search-container .search-wrapper .search-content .extra-details {
+  display: grid;
+  gap: 0.1em;
+  color: inherit;
+  font-size: 1.5em;
+}
+
+.search-container .search-wrapper .search-content .extra-details .date-and-time,
+.search-container .search-wrapper .search-content .extra-details .contact {
+  display: grid;
+  gap: 0.1em;
+  color: inherit;
+  font-size: inherit;
+  font-weight: 500;
+  color: var(--gray-900);
+}
+
+.search-container .search-wrapper .search-content .blood-types {
+  display: grid;
+  gap: 0.5em;
+  color: var(--red-500);
+  font-size: 1.5em;
+}
+
+.search-container .search-wrapper .search-content .blood-types .blood-header {
+  font-size: inherit;
+  font-weight: 700;
+  color: inherit;
+}
+
+.search-container .search-wrapper .search-content .blood-types .blood-group {
+  display: flex;
+  gap: 1em;
+  justify-content: justify-start;
+  align-items: center;
+}
+
+.search-container .search-wrapper .search-content .blood-types .blood-group .blood {
+  padding: 0.2em 0.5em;
+  border: 1px solid var(--red-500);
+  font-size: 3em;
+  font-weight: 900;
 }
