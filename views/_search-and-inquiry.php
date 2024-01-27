@@ -30,8 +30,16 @@
                 </div>
                 <div class="filter">
                     <label for="time">Time</label>
-                    <input id="time" type="time" class="form-control" name="time">
-                </div>
+                    <select id="time" class="form-control" name="time">
+                        <option value="">Select Time</option>
+                        <option value="8:00 AM to 3:00 PM">8:00 AM to 3:00 PM</option>
+                        <option value="7:30 AM to 5:00 PM">7:30 AM to 5:00 PM</option>
+                        <option value="8:30 AM to 4:30 PM">8:30 AM to 4:30 PM</option>
+                        <option value="9:00 AM to 4:00 PM">9:00 AM to 4:00 PM</option>
+                        <option value="8:00 AM to 5:00 PM">8:00 AM to 5:00 PM</option>
+                        <option value="9:30 AM to 4:30 PM">9:30 AM to 4:30 PM</option>
+                    </select>
+                    </div>
             </div>
             <div class="actions">
                 <button type="submit" class="primary">Apply Filters</button>
