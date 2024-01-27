@@ -12,14 +12,14 @@
             </div>
         </a>
         <ul class="nav">
-          <a href="">Home</a>
-          <a href="">Search and Inquiry</a>
-          <a href="">Review and Feedback</a>
-          <a href="">Notifications Center</a>
+            <a href="">Home</a>
+            <a href="">Search and Inquiry</a>
+            <a href="">Review and Feedback</a>
+            <a href="">Notifications Center</a>
         </ul>
-        <div class="user">
-          <div class="user-icon">JG</div>
-          <i class="fa-solid fa-caret-down"></i>
+        <div class="user" id="user-btn">
+            <div class="user-icon">JG</div>
+            <i class="fa-solid fa-caret-down"></i>
         </div>
     </ul>
 </div>

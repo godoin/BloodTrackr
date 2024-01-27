@@ -28,7 +28,7 @@ include_once 'core/functions.php';
   <?php include('views/inc/footer.php') ?>
 
   <!-- JS Link -->
-  <script src="assets/javascript/main.js" type="text/javascript"></script>
+  <script src="javascript/scripts.js" type="text/javascript"></script>
 </body>
 
 </html>
