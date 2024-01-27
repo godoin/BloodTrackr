@@ -5,7 +5,8 @@ CREATE TABLE users (
     password VARCHAR(255) NOT NULL,
     home_address VARCHAR(255),
     blood_type VARCHAR(10),
-    image_path VARCHAR(255)
+    image_path VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE blood_bank (
@@ -17,7 +18,8 @@ CREATE TABLE blood_bank (
     time VARCHAR(50) NOT NULL,
     blood_types VARCHAR(50) NOT NULL,
     status VARCHAR(20) NOT NULL,
-    date DATE NOT NULL
+    date DATE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE reviews (
@@ -27,9 +29,11 @@ CREATE TABLE reviews (
     bank_id INT,
     rating INT NOT NULL,
     message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (user_id) REFERENCES users(id),
     FOREIGN KEY (bank_id) REFERENCES blood_bank(id)
 );
+
 
 INSERT INTO blood_bank (name, location, telephone_num, region, time, blood_types, status, date) VALUES
 ('NATIONAL BLOOD CENTER (PRC TOWER)', '37 EDSA corner Boni Avenue, Mandaluyong City', '(02) 790-2300', 'Northern and Central Luzon', '8:00 AM to 3:00 PM', '["A", "O", "AB"]', 'Yes', '2024-02-15');

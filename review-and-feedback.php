@@ -13,7 +13,7 @@
             $selectedBloodBankId = $bloodBank['id'];
         }
         
-        $reviewsQuery = "SELECT username, rating, review_message FROM reviews WHERE bank_id = '$selectedBloodBankId'";
+        $reviewsQuery = "SELECT user_name, rating, message, created_at as review_time FROM reviews WHERE bank_id = '$selectedBloodBankId'";
         $reviewsResult = $conn->query($reviewsQuery);
     } else {
         $_SESSION['error_message'] = 'Please log in first before continuing';
@@ -27,6 +27,14 @@
             (name LIKE '%$bloodBankName%') LIMIT 1";
     
         $result = $conn->query($query);
+    
+        // if ($result && $result->num_rows > 0) {
+        //     $bloodBank = $result->fetch_assoc();
+        //     $selectedBloodBankId = $bloodBank['id'];
+    
+        //     $reviewsQuery = "SELECT user_name, rating, message FROM reviews WHERE bank_id = '$selectedBloodBankId'";
+        //     $reviewsResult = $conn->query($reviewsQuery);
+        // }
     }
     
     function getAllBloodBanks($conn)

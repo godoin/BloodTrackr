@@ -93,10 +93,10 @@
                         <div class="review">
                             <!-- User Detail -->
                             <div class="user">
-                                <div class="user-icon"><?php echo strtoupper(substr($reviewRow['username'], 0, 1)); ?></div>
+                                <div class="user-icon"><?php echo strtoupper(substr($reviewRow['user_name'], 0, 1)); ?></div>
                                 <div class="user-group">
-                                    <span class="date">Last Date Placeholder</span>
-                                    <span class="username"><?php echo $reviewRow['username']; ?></span>
+                                    <span class="date"><?php echo $reviewRow['review_time']; ?></span>
+                                    <span class="username"><?php echo $reviewRow['user_name']; ?></span>
                                 </div>
                             </div>
                             <!-- Review Message -->
@@ -111,7 +111,7 @@
                                     ?>
                                     <span class="rating"><?php echo $rating; ?>.0</span>
                                 </div>
-                                <p class="description"><?php echo $reviewRow['review_message']; ?></p>
+                                <p class="description"><?php echo $reviewRow['message']; ?></p>
                             </div>
                         </div>
                     <?php
