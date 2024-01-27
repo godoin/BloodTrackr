@@ -39,7 +39,7 @@
                         <option value="8:00 AM to 5:00 PM">8:00 AM to 5:00 PM</option>
                         <option value="9:30 AM to 4:30 PM">9:30 AM to 4:30 PM</option>
                     </select>
-                    </div>
+                </div>
             </div>
             <div class="actions">
                 <button type="submit" class="primary">Apply Filters</button>

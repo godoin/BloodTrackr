@@ -7,7 +7,7 @@
     </div> -->
     <div class="user-content">
         <div class="actions">
-            <a href="">User Profile</a>
+            <a href="user-profile.php">User Profile</a>
             <a href="core/user-logout.php">Logout</a>
         </div>
     </div>

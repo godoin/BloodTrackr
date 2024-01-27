@@ -73,6 +73,15 @@ button.primary:hover {
   background-color: var(--red-300);
 }
 
+button.secondary {
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+}
+
+button.secondary:hover {
+  background-color: var(--gray-300);
+}
+
 .error-msg {
   display: block;
   margin-top: 0.5em;
@@ -622,4 +631,109 @@ main .pubmats .pubmat img {
 
 .user-pop .user-content a:hover {
   background-color: var(--gray-300);
+}
+
+/* User Profile */
+.user-profile {
+  position: relative;
+  min-height: calc(100vh - 116px);
+  display: flex;
+  flex-direction: column;
+}
+
+.user-profile form {
+  width: 100%;
+}
+
+.user-profile form .header-wrapper {
+  padding: 2.5em 2em;
+  border-bottom: 1px solid var(--gray-300);
+  display: grid;
+  gap: 2em;
+}
+
+.user-profile form .header-wrapper .group {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.user-profile form .header-wrapper .title {
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--red-950);
+}
+
+.user-details {
+  padding: 2.5em 2em;
+  display: flex;
+  justify-content: justify-start;
+  border-bottom: 1px solid var(--gray-300);
+  align-items: center;
+}
+
+.user-details .title {
+  flex-basis: 20%;
+  font-size: 2em;
+  color: var(--gray-900);
+  font-weight: 700;
+}
+
+.user-details .groups {
+  flex-basis: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4em;
+}
+
+.user-details .groups .group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--gray-300);
+  border-radius: 2px;
+}
+
+.user-details .groups .group label {
+  font-size: 1.5em;
+  border-right: 1px solid var(--gray-300);
+  padding: 1em;
+  font-weight: 500;
+}
+
+.user-details .groups .group input {
+  border: none;
+  outline: none;
+  padding: 1em;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.user-details .user-group {
+  flex-basis: 20%;
+  color: var(--gray-900);
+  font-weight: 700;
+  display: grid;
+  gap: 0.5em;
+}
+
+.user-details .user-group .title{
+  flex-basis: 0;
+}
+
+.user-details .user-group .description {
+  font-size: 1.5em;
+  color: var(--gray-500);
+}
+
+.user-details .groups .user-icon {
+  width: 3em;
+  height: 3em;
+  display: grid;
+  place-content: center;
+  background-color: var(--gray-300);
+  color: var(--gray-700);
+  font-weight: 700;
+  border-radius: 100%;
+  font-size: 5em;
 }
