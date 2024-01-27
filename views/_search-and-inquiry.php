@@ -54,7 +54,6 @@
                             <span class="blood-header">Blood Types Available:</span>
                             <div class="blood-group">
                                 <?php
-                                // Loop through the blood types array and display them
                                 foreach ($bloodTypesArray as $bloodType) {
                                     echo '<div class="blood">' . trim($bloodType) . '</div>';
                                 }
@@ -65,7 +64,6 @@
             <?php
                 }
             } else {
-                // Handle the case where the query fails
                 echo "Error: " . mysqli_error($conn);
             }
             ?>
