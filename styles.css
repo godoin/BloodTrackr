@@ -114,6 +114,10 @@ button.secondary:hover {
 
 /* Navigation Header */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
   min-width: 100vw;
   min-height: fit;
 }
@@ -228,6 +232,7 @@ button.secondary:hover {
 /* Landing Page */
 /* Intro */
 main .intro {
+  margin-top: 88px;
   position: relative;
   height: calc(100vh - 88px);
   background-image: url('assets/images/background.jpg'); 
@@ -318,6 +323,7 @@ main .pubmats .pubmat img {
 
 /* Login and Register Page */
 .hero {
+  margin-top: 88px;
   position: relative;
   height: calc(100vh - 116px);
   background-image: url('assets/images/background.jpg'); 
@@ -422,6 +428,7 @@ main .pubmats .pubmat img {
 
 /* Search and Inquiry */
 .search-container {
+  margin-top: 88px;
   position: relative;
   min-height: calc(100vh - 116px);
   padding: 0 2em;
@@ -635,6 +642,7 @@ main .pubmats .pubmat img {
 
 /* User Profile */
 .user-profile {
+  margin-top: 88px;
   position: relative;
   min-height: calc(100vh - 116px);
   display: flex;

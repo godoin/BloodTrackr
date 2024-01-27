@@ -53,9 +53,7 @@
         </div>
         <div class="search-wrapper">
             <?php
-            // Check if the query was successful
             if ($result) {
-                // Loop through the results and display them
                 while ($row = mysqli_fetch_assoc($result)) {
                     $bloodTypesString = str_replace(['[', ']', '"'], '', $row['blood_types']);
                     $bloodTypesArray = explode(",", $bloodTypesString);
