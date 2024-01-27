@@ -6,23 +6,35 @@
             <i class="fa-solid fa-filter"></i>
             <header>Filters</header>
         </div>
-        <form class="filters-group">
+        <form class="filters-group" method="GET">
             <div class="filters">
                 <div class="filter">
-                    <label for="">Blood Type</label>
-                    <input id="" type="" class="form-control" name="" autofocus>
+                    <label for="blood_type">Blood Type</label>
+                    <select id="blood_type" class="form-control" name="blood_type">
+                        <option value="">Select Blood Type</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="O">O</option>
+                        <option value="AB">AB</option>
+                    </select>
                 </div>
                 <div class="filter">
-                    <label for="">Region</label>
-                    <input id="" type="" class="form-control" name="">
+                    <label for="region">Region</label>
+                    <select id="region" class="form-control" name="region">
+                        <option value="">Select Region</option>
+                        <option value="Northern And Central Luzon">Northern And Central Luzon</option>
+                        <option value="Visayas">Visayas</option>
+                        <option value="Mindanao">Mindanao</option>
+                        <option value="National Capital Region">National Capital Region</option>
+                    </select>
                 </div>
                 <div class="filter">
-                    <label for="">Time</label>
-                    <input id="" type="" class="form-control" name="">
+                    <label for="time">Time</label>
+                    <input id="time" type="time" class="form-control" name="time">
                 </div>
             </div>
             <div class="actions">
-                <button class="primary">Apply Filters</button>
+                <button type="submit" class="primary">Apply Filters</button>
             </div>
         </form>
     </section>
