@@ -51,40 +51,40 @@
         <div class="search-header">
             <header>Search and Inquiry</header>
         </div>
-        <div class="search-wrapper">
-            <?php
-            if ($result) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $bloodTypesString = str_replace(['[', ']', '"'], '', $row['blood_types']);
-                    $bloodTypesArray = explode(",", $bloodTypesString);
-            ?>
-                    <div class="search-content">
-                        <span class="bank-name"><?php echo $row['name']; ?></span>
-                        <div class="address">
-                            <span class="location"><?php echo $row['location']; ?></span>
-                            <span class="region"><?php echo $row['region']; ?></span>
-                        </div>
-                        <div class="extra-details">
-                            <span class="date-and-time"><?php echo $row['date']; ?> | <?php echo $row['time']; ?></span>
-                            <span class="contact">Contact: <?php echo $row['telephone_num']; ?></span>
-                        </div>
-                        <div class="blood-types">
-                            <span class="blood-header">Blood Types Available:</span>
-                            <div class="blood-group">
-                                <?php
-                                foreach ($bloodTypesArray as $bloodType) {
-                                    echo '<div class="blood">' . trim($bloodType) . '</div>';
-                                }
-                                ?>
+            <div class="search-wrapper">
+                <?php
+                if ($result) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $bloodTypesString = str_replace(['[', ']', '"'], '', $row['blood_types']);
+                        $bloodTypesArray = explode(",", $bloodTypesString);
+                ?>
+                        <div class="search-content" onclick="redirectToBankMap('<?php echo $row['name']; ?>')">
+                            <span class="bank-name"><?php echo $row['name']; ?></span>
+                            <div class="address">
+                                <span class="location"><?php echo $row['location']; ?></span>
+                                <span class="region"><?php echo $row['region']; ?></span>
+                            </div>
+                            <div class="extra-details">
+                                <span class="date-and-time"><?php echo $row['date']; ?> | <?php echo $row['time']; ?></span>
+                                <span class="contact">Contact: <?php echo $row['telephone_num']; ?></span>
+                            </div>
+                            <div class="blood-types">
+                                <span class="blood-header">Blood Types Available:</span>
+                                <div class="blood-group">
+                                    <?php
+                                    foreach ($bloodTypesArray as $bloodType) {
+                                        echo '<div class="blood">' . trim($bloodType) . '</div>';
+                                    }
+                                    ?>
+                                </div>
                             </div>
                         </div>
-                    </div>
-            <?php
+                <?php
+                    }
+                } else {
+                    echo "Error: " . mysqli_error($conn);
                 }
-            } else {
-                echo "Error: " . mysqli_error($conn);
-            }
-            ?>
-        </div>
+                ?>
+            </div>
     </section>
 </div>

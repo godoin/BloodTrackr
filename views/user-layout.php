@@ -30,6 +30,7 @@ include_once 'core/functions.php';
   <!-- JS Link -->
   <script src="javascript/scripts.js" type="text/javascript"></script>
   <script src="javascript/rating.js" type="text/javascript"></script>
+  <script src="javascript/location.js" type="text/javascript"></script>
 </body>
 
 </html>
