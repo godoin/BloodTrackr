@@ -33,27 +33,41 @@
         </div>
         <div class="search-wrapper">
             <?php
-                for ($i = 1; $i <= 10; $i++) {
+            // Check if the query was successful
+            if ($result) {
+                // Loop through the results and display them
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $bloodTypesString = str_replace(['[', ']', '"'], '', $row['blood_types']);
+                    $bloodTypesArray = explode(",", $bloodTypesString);
             ?>
-                <div class="search-content">
-                    <span class="bank-name">Blood Bank Name Placeholder</span>
-                    <div class="address">
-                        <span class="location">Location Placeholder</span>
-                        <span class="region">Region Placeholder</span>
-                    </div>
-                    <div class="extra-details">
-                        <span class="date-and-time">Date Placeholder | Time Placeholder</span>
-                        <span class="contact">Contact: Contact Placeholder</span>
-                    </div>
-                    <div class="blood-types">
-                        <span class="blood-header">Blood Types Available:</span>
-                        <div class="blood-group">
-                            <div class="blood">A</div>
+                    <div class="search-content">
+                        <span class="bank-name"><?php echo $row['name']; ?></span>
+                        <div class="address">
+                            <span class="location"><?php echo $row['location']; ?></span>
+                            <span class="region"><?php echo $row['region']; ?></span>
+                        </div>
+                        <div class="extra-details">
+                            <span class="date-and-time"><?php echo $row['date']; ?> | <?php echo $row['time']; ?></span>
+                            <span class="contact">Contact: <?php echo $row['telephone_num']; ?></span>
+                        </div>
+                        <div class="blood-types">
+                            <span class="blood-header">Blood Types Available:</span>
+                            <div class="blood-group">
+                                <?php
+                                // Loop through the blood types array and display them
+                                foreach ($bloodTypesArray as $bloodType) {
+                                    echo '<div class="blood">' . trim($bloodType) . '</div>';
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
-                </div>
             <?php
                 }
+            } else {
+                // Handle the case where the query fails
+                echo "Error: " . mysqli_error($conn);
+            }
             ?>
         </div>
     </section>

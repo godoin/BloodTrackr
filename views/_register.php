@@ -10,6 +10,8 @@
                 <?php
                     if(isset($error)) {
                         echo '<span class="error-msg"> Error: ' . $error . '</span>';
+                    } elseif (isset($success)) {
+                        echo '<span class="success-msg"> Success: ' . $success . '</span>';
                     }
                 ?>
                 <div class="fields">

@@ -24,6 +24,10 @@
   --red-500: #ef4444;
   --red-900: #7f1d1d;
   --red-950: #450a0a;
+  --green-300: #86efac;
+  --green-500: #22c55e;
+  --green-700: #15803d;
+  --green-900: #14532d;
   --lime-50: #f7feef;
   --white: #fff;
   --black: #000;
@@ -67,6 +71,36 @@ button.primary {
 
 button.primary:hover {
   background-color: var(--red-300);
+}
+
+.error-msg {
+  display: block;
+  margin-top: 0.5em;
+  border-radius: 2px;
+  font-size: 1.3em;
+  padding: 1em;
+  background-color: var(--red-500);
+  color: white;
+}
+
+.error-stmt {
+  margin: 0.5em 0;
+  display: block;
+  min-width: 250px;
+  border-radius: 2px;
+  font-size: 1.3em;
+  padding: 1em;
+  background-color: var(--gray-500);
+  color: white;
+}
+
+.success-msg {
+  display: block;
+  border-radius: 2px;
+  font-size: 1.3em;
+  padding: 1em;
+  background-color: var(--green-500);
+  color: white;
 }
 
 /* Navigation Header */
@@ -347,6 +381,7 @@ main .pubmats .pubmat img {
 
 .hero .hero-content form .details .fields .field input {
   padding: 0.8em 0.5em;
+  font-size: 1.5em
 }
 
 .hero .hero-content form .details .redirect {
@@ -439,6 +474,7 @@ main .pubmats .pubmat img {
 
 .search-container .filters .filters-group .filters .filter input {
   padding: 0.8em 0.5em;
+  font-size: 1.5em;
 }
 
 .search-container .filters .filters-group .actions {
