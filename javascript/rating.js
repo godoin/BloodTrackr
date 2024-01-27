@@ -1,12 +1,10 @@
 // Buttons
-const userButton = document.querySelector("#user-btn");
 const ratingButton = document.querySelector('#rating-btn');
 const ratingExitButton = document.querySelector('#rating-exit');
 const ratingDesc = document.querySelector('.rating-desc');
 const radioInputs = document.querySelectorAll('.radio-input');
 
 // Modals
-const userPopModal = document.querySelector(".logged");
 const ratingModal = document.querySelector('.rating-pop');
 
 // Exit Buttons
@@ -14,33 +12,29 @@ ratingExitButton.addEventListener('click', () => {
     ratingModal.classList.remove('active');
 });
 
-// Pop up Modals
-userButton.addEventListener('click', () => {
-    userPopModal.classList.toggle('active');
-});
-
 ratingButton.addEventListener('click', () => {
     ratingModal.classList.toggle('active');
 });  
 
 // Star Clicks
+// Star Clicks
 radioInputs.forEach(input => {
-    input.addEventListener('click', () => {
-        switch(input.value) {
+    input.addEventListener('change', () => {
+        switch (input.value) {
             case '5':
-                ratingDesc.textContent = 'It was awesome!';
+                ratingDesc.textContent = 'Excellent employees with outstanding service!';
                 break;
             case '4':
-                ratingDesc.textContent = 'It was worth the money!';
+                ratingDesc.textContent = 'Very good enviroment with high-quality service.';
                 break;
             case '3':
-                ratingDesc.textContent = 'It was just okay';
+                ratingDesc.textContent = 'Decent or average with satisfactory service.';
                 break;
             case '2':
-                ratingDesc.textContent = 'It was poor quality';
+                ratingDesc.textContent = 'Needs improvement in service and facilities.';
                 break;
             case '1':
-                ratingDesc.textContent = 'It was terrible!';
+                ratingDesc.textContent = 'Poor management with serious issues.';
                 break;
             default:
                 ratingDesc.textContent = '';

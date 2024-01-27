@@ -83,7 +83,7 @@
             <div class="reviews">
                 <div class="reviews-header">
                     <header>Reviews</header>
-                    <button class="primary">Write a Review</button>
+                    <button id="rating-btn" class="primary">Write a Review</button>
                 </div>
                 <div class="reviews-section">
                     <?php
@@ -102,7 +102,6 @@
                             <!-- Review Message -->
                             <div class="review-message">
                                 <div class="stars-container">
-                                    <!-- Display star icons based on the rating -->
                                     <?php
                                         $rating = $reviewRow['rating'];
                                         for ($i = 0; $i < $rating; $i++) {

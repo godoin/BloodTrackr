@@ -1062,3 +1062,165 @@ main .pubmats .pubmat img {
   font-weight: 700;
 }
 
+/* Pop up rating */
+.rating-pop {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  min-height: 100vh;
+  margin: 0 1em;
+}
+
+.rating-pop.active {
+  display: flex;
+}
+
+.rating-pop .wrapper {
+  max-width: 440px;
+  background-color: var(--white);
+  border: 1px solid var(--grey-300);
+}
+
+.rating-pop form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.rating-pop .rating-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--grey-300);
+  padding: 1em;
+}
+
+.rating-pop .rating-header .exit {
+  cursor: pointer;
+}
+
+.rating-pop .rating-header .title {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.rating-pop .rating-header .fa-xmark {
+  font-size: 1.7rem;
+}
+
+.rating-pop .rating-description {
+  padding: 1em 1.5em;
+}
+
+.rating-pop .rating-desc {
+  font-size: 1.5rem;
+  color: var(--yellow-500);
+}
+
+.rating-pop .rating-select {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5em;
+}
+
+.rating-pop .rating-select .title {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.rating-pop .rating-select .rate {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating-pop .rating-select .rate .radio {
+  display: flex;
+  gap: 1em;
+  overflow: hidden;
+}
+
+.rating-pop .rating-select .rate .radio-input {
+  display: none;
+}
+
+.rating-pop .rating-select .rate .radio-label {
+  font-size: 1.5rem;
+  color: var(--dark-color);
+  background-color: var(--white);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s ease;
+}
+
+.rating-pop .rating-select .rate .fa-star {
+  color: var(--grey-500);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.rating-pop .rating-select .rate .fa-star:hover {
+  color: var(--yellow-500);
+}
+
+.rating-pop .rating-select .rate .radio-input:checked+.radio-label .fa-star {
+  color: var(--yellow-500);
+}
+
+.rating-pop .rating-header .rating-desc {
+  font-size: 1.7rem;
+  color: var(--yellow-500);
+}
+
+.rating-pop .field {
+  margin: 1em 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8em;
+}
+
+.rating-pop .field label {
+  font-size: 1.5rem;
+}
+
+.rating-pop .field input {
+  padding: 1em;
+}
+
+.rating-pop .field textarea {
+  resize: none;
+  min-height: 120px;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+.rating-pop .actions {
+  display: flex;
+  justify-content: right;
+}
+
+.rating-pop .actions button {
+  padding: 1em 2em;
+  cursor: pointer;
+  background-color: var(--yellow-500);
+  border: 1px solid var(--yellow-500);
+  color: var(--white);
+  transition: all .3s ease;
+}
+
+.rating-pop .actions button:hover {
+  background-color: var(--white);
+  color: var(--yellow-500);
+}

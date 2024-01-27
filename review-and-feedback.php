@@ -15,6 +15,25 @@
         
         $reviewsQuery = "SELECT user_name, rating, message, created_at as review_time FROM reviews WHERE bank_id = '$selectedBloodBankId'";
         $reviewsResult = $conn->query($reviewsQuery);
+
+        $user_id = $_SESSION["user_id"];
+        $user_name = $_SESSION["user_name"];
+
+        $bank_id = $selectedBloodBankId; 
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $rating = $_POST['rating'];
+            $message = $_POST['message'];
+
+            $insertQuery = "INSERT INTO reviews (user_id, user_name, bank_id, rating, message) 
+                            VALUES ('$user_id', '$user_name', '$bank_id', '$rating', '$message')";
+
+            if ($conn->query($insertQuery) === TRUE) {
+                echo "Review added successfully!";
+            } else {
+                echo "Error adding review: " . $conn->error;
+            }
+        }
     } else {
         $_SESSION['error_message'] = 'Please log in first before continuing';
         header('location:login.php?error=user_access_deny');
