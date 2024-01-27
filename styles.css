@@ -79,7 +79,7 @@ button.primary:hover {
   height: 2em;
 }
 
-.header .nav {
+.header .navbar {
   display: flex;
   width: 100%;
   height: 9em;
@@ -91,30 +91,74 @@ button.primary:hover {
   color: var(--white);
 };
 
-.nav .site-logo {
+.header .navbar .site-logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.nav .site-logo .logo-wrapper {
+.header .navbar .site-logo .logo-wrapper {
   max-width: 5em;
 }
 
-.nav .site-logo img {
+.header .navbar .site-logo img {
   width: 100%;
   object-fit: cover;
 }
 
-.nav .site-logo .logo-group .logo-title { 
+.header .navbar .site-logo .logo-group .logo-title { 
   font-size: 2em;
   font-weight: 700;
 }
 
-.nav .nav-message {
+.header .navbar .navbar-message {
   font-size: 2.5em;
   font-weight: 700;
+}
+
+.header .navbar .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+}
+
+.header .navbar .nav a {
+  font-size: 2.5em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.header .navbar .nav a:hover {
+  color: var(--gray-300);
+}
+
+.header .navbar .user {
+  cursor: pointer;
+  background-color: var(--gray-300);
+  display: flex;
+  padding: 1em;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+}
+
+.header .navbar .user .user-icon {
+  min-width: 2em;
+  min-height: 2em;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red-500);
+  font-size: 3em;
+}
+
+.header .navbar .user .fa-caret-down {
+  color: var(--red-500);
+  font-size: 1.5em;
 }
 
 /* Footer */

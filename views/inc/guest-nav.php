@@ -1,7 +1,7 @@
 <!-- Navigation Header -->
 <div class="header">
     <div class="bg-lime"></div>
-    <ul class="nav">
+    <ul class="navbar">
         <a href="index.php" class="site-logo">
             <div class="logo-wrapper">
                 <img src="assets/images/logo.png" alt="BloodTrackr">

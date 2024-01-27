@@ -1,40 +1,25 @@
-<?php
-include_once 'core/functions.php';
-
-?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?php echo $title; ?></title>
-  <!-- CSS Link -->
-  <link rel="stylesheet" href="styles.css" type="text/css">
-  <!-- Font Awesome Link -->
-  <script src="https://kit.fontawesome.com/84e2199ce0.js" crossorigin="anonymous"></script>
-  <!-- FontAwesome Offline -->
-  <link rel="stylesheet" href="assets\fontawesome-web\css\all.css">
-</head>
-
-<body>
-  <?php include('views/inc/user-nav.php') ?>
-  <?php include('views/inc/modals.php') ?>
-  <?php include($contentView) ?>
-
-  <?php include('views/inc/footer.php') ?>
-
-  <!-- JS Link -->
-  <script src="assets/javascript/main.js" type="text/javascript"></script>
-  <script src="assets/javascript/shop.js" type="text/javascript"></script>
-  <script src="assets/javascript/products.js" type="text/javascript"></script>
-  <!-- <script src="assets/javascript/selector.js" type="text/javascript"></script> -->
-  <script src="assets/javascript/seller.js" type="text/javascript"></script>
-  <script src="assets/javascript/member.js" type="text/javascript"></script>
-  <!-- <script src="assets/javascript/click.js"></script> -->
-</body>
-
-</html>
+<!-- Navigation Header -->
+<div class="header">
+    <div class="bg-lime"></div>
+    <ul class="navbar">
+        <a href="index.php" class="site-logo">
+            <div class="logo-wrapper">
+                <img src="assets/images/logo.png" alt="BloodTrackr">
+            </div>
+            <div class="logo-group">
+                <div class="logo-title">BloodTrackr</div>
+                <div class="logo-desc">blood services</div>
+            </div>
+        </a>
+        <ul class="nav">
+          <a href="">Home</a>
+          <a href="">Search and Inquiry</a>
+          <a href="">Review and Feedback</a>
+          <a href="">Notifications Center</a>
+        </ul>
+        <div class="user">
+          <div class="user-icon">JG</div>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+    </ul>
+</div>
