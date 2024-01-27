@@ -3,5 +3,5 @@
   include 'core/database.php';
   $title = 'BloodTrackr';
   $contentView = 'views/_index.php';
-  include('views/master.php');
+  include('views/guest-layout.php');
 ?>

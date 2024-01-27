@@ -3,5 +3,5 @@
   include 'core/database.php';
   $title = 'Register';
   $contentView = 'views/_register.php';
-  include('views/master.php');
+  include('views/guest-layout.php');
 ?>

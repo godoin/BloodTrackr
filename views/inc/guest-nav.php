@@ -2,7 +2,7 @@
 <div class="header">
     <div class="bg-lime"></div>
     <ul class="nav">
-        <div class="site-logo">
+        <a href="index.php" class="site-logo">
             <div class="logo-wrapper">
                 <img src="assets/images/logo.png" alt="BloodTrackr">
             </div>
@@ -10,7 +10,7 @@
                 <div class="logo-title">BloodTrackr</div>
                 <div class="logo-desc">blood services</div>
             </div>
-        </div>
+        </a>
         <div class="nav-message">BE A HERO AND DONATE BLOOD NOW</div>
         <div class="redirect">
             <a href="login.php">

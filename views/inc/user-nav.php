@@ -21,7 +21,7 @@ include_once 'core/functions.php';
 </head>
 
 <body>
-  <?php include('views/inc/nav.php') ?>
+  <?php include('views/inc/user-nav.php') ?>
   <?php include('views/inc/modals.php') ?>
   <?php include($contentView) ?>
 
