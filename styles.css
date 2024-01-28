@@ -554,43 +554,35 @@ main .pubmats .pubmat img {
   align-items: center;
 }
 
-@media(min-width: 640px) {
-
-}
-
-@media(min-width: 1024px) {
-
-}
-
-@media(min-width: 1280px) {
-
-}
-
-
 /* Search and Inquiry */
 .search-container {
+  position: relative;
   margin-top: 88px;
   position: relative;
-  min-height: calc(100vh - 116px);
-  padding: 0 2em;
+  height: 100%;
+  border: 1px solid var(--gray-300);
+  height: 100%;
+  width: 100%;
   display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.search-container .filters {
+.search-container .filters-container {
+  display: none;
   border: 1px solid var(--gray-300);
   border-top: 0;
-  border-bottom: 0;
-  flex-basis: 15%;
+  border-right: 0;
+  height: 100%;
 }
 
 .search-container .search {
-  flex-basis: 85%;
   width: 100%;
-  border-right: 1px solid var(--gray-300);
+  border: 1px solid var(--gray-300);
 }
 
 /* Filters */
-.search-container .filters .filters-header {
+.search-container .filters-container .filters-header {
   padding: 1.5em 2.2em;
   border-bottom: 1px solid var(--gray-300);
   display: flex;
@@ -599,26 +591,25 @@ main .pubmats .pubmat img {
   gap: 1em;
 }
 
-.search-container .filters .filters-header .fa-filter {
+.search-container .filters-container .filters-header .fa-filter {
   color: var(--red-950);
   font-size: 2.5em;
 }
 
-.search-container .filters .filters-header header {
+.search-container .filters-container .filters-header header {
   font-size: 2em;
   font-weight: 700;
   color: var(--red-950);
 }
 
-.search-container .filters .filters-group .filters {
-  border: none;
+
+.search-container .filters-container .filters-group {
+  min-height: 100%;
 }
 
-.search-container .filters .filters-group .filters .filter {
+.search-container .filters-container .filters-group .filters .filter {
   padding: 1.5em 2.2em;
   border-bottom: 1px solid var(--gray-300);
-  border-left: 0;
-  border-right: 0;
   display: grid;
   gap: 0.5em;
 }
@@ -629,20 +620,20 @@ main .pubmats .pubmat img {
   color: var(--gray-700);
 }
 
-.search-container .filters .filters-group .filter .form-control,
-.search-container .filters .filters-group .filter .form-control select
-.search-container .filters .filters-group .filter .form-control select option {
+.search-container .filters-container .filters-group .filters .filter .form-control,
+.search-container .filters-container .filters-group .filters .filter .form-control select,
+.search-container .filters-container .filters-group .filters .filter .form-control select option {
   padding: 0.8em 0.5em;
   font-size: 1.5em;
 }
 
-.search-container .filters .filters-group .actions {
+.search-container .filters-container .filters-group .actions {
   padding: 1.5em 2.2em;
   display: flex;
   min-width: 100%;
 }
 
-.search-container .filters .filters-group .actions button {
+.search-container .filters-container .filters-group .actions button {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -667,7 +658,7 @@ main .pubmats .pubmat img {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1em;
 }
 
@@ -748,6 +739,49 @@ main .pubmats .pubmat img {
   border: 1px solid var(--red-500);
   font-size: 3em;
   font-weight: 900;
+}
+
+@media(min-width: 640px) {
+  .search-container {
+    padding: 0 2em;
+  }
+  .search-container .search .search-wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media(min-width: 640px) {
+  .search-container .filters-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: justify-start;
+    flex-basis: 30%;
+  }
+  
+  .search-container .search {
+    flex-basis: 80%;
+  }
+}
+
+@media(min-width: 1224px) {
+  .search-container .filters-container {
+    flex-basis: 18%;
+  }
+
+  .search-container .search {
+    flex-basis: 82%;
+  }
+
+  .search-container .search .search-wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(min-width: 1540px) {
+  .search-container .search .search-wrapper {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 /* Logged Hamburger */

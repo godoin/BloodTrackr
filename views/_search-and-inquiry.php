@@ -1,7 +1,7 @@
 <!-- Search and Inquiry -->
 <div class="search-container">
     <!-- Filters -->
-    <section class="filters">
+    <section class="filters-container">
         <div class="filters-header">
             <i class="fa-solid fa-filter"></i>
             <header>Filters</header>
