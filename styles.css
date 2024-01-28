@@ -60,7 +60,7 @@ button {
   display: flex;
   gap: 1em;
   padding: 0.8em 2em;
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -91,7 +91,7 @@ button.secondary:hover {
   display: block;
   margin-top: 0.5em;
   border-radius: 2px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   padding: 1em;
   background-color: var(--red-500);
   color: white;
@@ -102,7 +102,7 @@ button.secondary:hover {
   display: block;
   min-width: 250px;
   border-radius: 2px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   padding: 1em;
   background-color: var(--gray-500);
   color: white;
@@ -111,7 +111,7 @@ button.secondary:hover {
 .success-msg {
   display: block;
   border-radius: 2px;
-  font-size: 1.3em;
+  font-size: 1.5em;
   padding: 1em;
   background-color: var(--green-500);
   color: white;
@@ -440,13 +440,13 @@ main .pubmats .pubmat img {
 }
 
 .hero .hero-content form .details .desc .title {
-  font-size: 2.5em;
+  font-size: 3em;
   color: var(--red-950);
   font-weight: 800;
 }
 
 .hero .hero-content form .details .desc .description {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 500;
   color: var(--gray-700);
 }
@@ -462,14 +462,14 @@ main .pubmats .pubmat img {
 }
 
 .hero .hero-content form .details .fields .field label {
-  font-size: 1.5em;
+  font-size: 1.8em;
   color: var(--gray-700);
   font-weight: 500;
 }
 
 .hero .hero-content form .details .fields .field input {
   padding: 0.8em 0.5em;
-  font-size: 1.5em
+  font-size: 1.8em
 }
 
 .hero .hero-content form .details .redirect {
@@ -481,13 +481,13 @@ main .pubmats .pubmat img {
 
 .hero .hero-content form .details .redirect .text {
   color: var(--gray-700);
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 500;
 }
 
 .hero .hero-content form .details .redirect a {
   color: var(--red-500);
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: 700;
 }
 
@@ -506,6 +506,19 @@ main .pubmats .pubmat img {
   justify-content: center;
   align-items: center;
 }
+
+@media(min-width: 640px) {
+
+}
+
+@media(min-width: 1024px) {
+
+}
+
+@media(min-width: 1280px) {
+
+}
+
 
 /* Search and Inquiry */
 .search-container {
