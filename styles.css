@@ -1091,11 +1091,9 @@ main .pubmats .pubmat img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1em;
-  justify-content: justify-end;
 }
 
 .reviews-container .content-container .content-group .bank-details .details-section .blood-types .blood {
-  padding: 0em 0.5em;
   max-width: 5em;
   border: 1px solid var(--red-500);
   color: var(--red-500);
@@ -1216,9 +1214,6 @@ main .pubmats .pubmat img {
   font-weight: 700;
 }
 
-@media(min-width: 640px) {
-}
-
 @media(min-width: 1024px) {
   /* Reviews */
   .reviews-container {
@@ -1246,7 +1241,6 @@ main .pubmats .pubmat img {
   .reviews-container .content-container {
     flex-basis: 85%;
   }
-
 }
 
 /* Pop up rating */
@@ -1423,13 +1417,18 @@ main .pubmats .pubmat img {
 }
 
 .bank-map .bank-details {
-  flex-basis: 20%;
+  flex-basis: 0;
+  padding: 2em 0;
+  display: none;
+  flex-direction: column;
+  gap: 2em;
 }
 
 .bank-map .map {
-  flex-basis: 80%;
+  flex-basis: 100%;
   overflow: hidden;
 }
+
 /* Map */
 /* .bank-map iframe {
   width: 100%;
@@ -1438,13 +1437,6 @@ main .pubmats .pubmat img {
 } */
 
 /* Bank Details */
-.bank-map .bank-details {
-  padding: 2em 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-}
-
 .bank-map .bank-details .details-section {
   display: grid;
   gap: 2em;
@@ -1469,7 +1461,7 @@ main .pubmats .pubmat img {
 }
 
 .bank-map .bank-details .details-section .detail .group .icon {
-  font-size: 2em;
+  font-size: 2.5em;
 }
 
 .bank-map .bank-details .details-section .detail .group .text-group {
@@ -1478,7 +1470,7 @@ main .pubmats .pubmat img {
 }
 
 .bank-map .bank-details .details-section .detail .group .text-group > * {
-  font-size: 1.7em;
+  font-size: 1.8em;
   font-weight: 500;
   color: var(--gray-900);
 }
@@ -1535,4 +1527,33 @@ main .pubmats .pubmat img {
 
 .bank-map .bank-details input:hover {
   background-color: var(--gray-300);
+}
+
+@media(min-width: 1024px) {
+  .bank-map {
+    padding: 0 5em;
+  }
+  
+  .bank-map .bank-details {
+    flex-basis: 25%;
+    padding: 2em;
+    display: flex;
+    border-left: 2px solid var(--gray-300);
+  }
+  
+  .bank-map .map {
+    flex-basis: 75%;
+    overflow: hidden;
+    border: 1px solid var(--gray-300);
+  }
+}
+
+@media(min-width: 1280px) {
+  .bank-map .bank-details {
+    flex-basis: 20%;
+  }
+
+  .bank-map .map {
+    flex-basis: 80%;
+  }
 }
