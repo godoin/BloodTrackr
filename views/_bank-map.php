@@ -58,7 +58,7 @@
   <div class="map">
     <?php
     if (isset($_SESSION['address'])) {
-      echo '<iframe width="100%" height="650" src="https://maps.google.com/maps?q=' . urlencode($_SESSION['address']) . '&output=embed"></iframe>';
+      echo '<iframe width="100%" height="100%" src="https://maps.google.com/maps?q=' . urlencode($_SESSION['address']) . '&output=embed"></iframe>';
     }
     ?>
   </div>

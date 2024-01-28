@@ -522,11 +522,12 @@ main .pubmats .pubmat img {
   padding: 1.5em 2.2em;
   display: flex;
   min-width: 100%;
-  justify-content: center;
-  align-items: center;
 }
 
 .search-container .filters .filters-group .actions button {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   min-width: inherit;
 }
 
@@ -954,7 +955,7 @@ main .pubmats .pubmat img {
 
 .reviews-container .reviews {
   display: grid;
-  justify-content; justify-start;
+  justify-content: justify-start;
   align-items: center;
 }
 
@@ -1241,6 +1242,7 @@ main .pubmats .pubmat img {
 
 .bank-map .map {
   flex-basis: 80%;
+  overflow: hidden;
 }
 /* Map */
 /* .bank-map iframe {
