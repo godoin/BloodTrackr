@@ -182,14 +182,14 @@ button.secondary:hover {
 }
 
 .header .navbar .nav {
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
-  gap: 6em;
+  gap: 3em;
 }
 
 .header .navbar .nav a {
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: 500;
   transition: all 0.3s ease;
 }
@@ -209,15 +209,52 @@ button.secondary:hover {
   min-height: 100%;
 }
 
-.header .navbar .user .user-icon {
-  min-width: 2em;
-  min-height: 2em;
-  border-radius: 100%;
+.header .navbar .user .user-group {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1em;
+}
+
+.header .navbar .user .user-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2em;
+  min-height: 2em;
+  border-radius: 100%;
   background-color: var(--red-500);
   font-size: 3em;
+}
+
+.header .navbar .left-group {
+  height: 100%;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .navbar .left-group .icon-button {
+  display: flex;
+  padding: 1.5em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray-300);
+  /* border: 1px solid var(--red-500); */
+  border-radius: 6px;
+  transition: all .3s ease;
+}
+
+.header .navbar .left-group .icon-button:hover {
+  background-color: var(--gray-100);
+}
+
+.header .navbar .left-group .icon-button .menu {
+  font-size: 2.5em;
+  color: var(--red-500);
 }
 
 .header .navbar .user .fa-caret-down {
@@ -234,6 +271,16 @@ button.secondary:hover {
 @media(min-width: 768px) {
   .header .navbar .nav-message {
     display: flex;
+  }
+}
+
+@media(min-width: 1024px) {
+  .header .navbar .nav {
+    display:flex;
+    gap: 5em;
+  }
+  .header .navbar .left-group .icon-button {
+    display: none;
   }
 }
 
