@@ -230,7 +230,7 @@ button.secondary:hover {
 .header .navbar .left-group {
   height: 100%;
   display: flex;
-  gap: 1em;
+  gap: 2em;
   justify-content: center;
   align-items: center;
 }
@@ -826,6 +826,9 @@ main .pubmats .pubmat img {
 }
 
 .user-profile form {
+  border: 1px solid var(--gray-300);
+  border-bottom: 0;
+  height: 100%;
   width: 100%;
 }
 
@@ -851,9 +854,10 @@ main .pubmats .pubmat img {
 .user-details {
   padding: 2.5em 2em;
   display: flex;
-  justify-content: justify-start;
+  flex-direction: column;
   border-bottom: 1px solid var(--gray-300);
-  align-items: center;
+  align-items: flex-start;
+  gap: 1em;
 }
 
 .user-details .title {
@@ -866,7 +870,7 @@ main .pubmats .pubmat img {
 .user-details .groups {
   flex-basis: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: 4em;
 }
 
@@ -920,6 +924,38 @@ main .pubmats .pubmat img {
   font-weight: 700;
   border-radius: 100%;
   font-size: 5em;
+}
+
+.user-details .groups.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media(min-width: 640px) {
+  .user-profile {
+    padding: 0 4em;
+  }
+
+  .user-details .groups {
+    flex-direction: row;
+  }
+  
+  .user-details .groups .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--gray-300);
+    border-radius: 2px;
+  }
+}
+
+@media(min-width: 1024px) {
+
+}
+
+@media(min-width: 1280px) {
+
 }
 
 /* Reviews */
