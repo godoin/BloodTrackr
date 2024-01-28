@@ -139,13 +139,14 @@ button.secondary:hover {
   height: 9em;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2em;
+  padding: 0 1em;
   background-color: var(--red-950);
   border-bottom: 2px solid var(--red-500);
   color: var(--white);
 }
 
 .header .navbar .nav-message {
+  display: none;
   font-size: 3em;
   font-weight: 500;
 }
@@ -224,6 +225,18 @@ button.secondary:hover {
   font-size: 1.5em;
 }
 
+@media(min-width: 640px) {
+  .header .navbar {
+    padding: 0 5em;
+  }
+}
+
+@media(min-width: 768px) {
+  .header .navbar .nav-message {
+    display: flex;
+  }
+}
+
 /* Footer */
 .footer {
   display: flex;
@@ -274,17 +287,17 @@ main .intro .intro-content {
 main .intro .intro-content .message-group {
   display: grid;
   gap: 8em;
-  width: 50%;
+  width: 90%;
 }
 
 main .intro .intro-content .message-group header {
-  font-size: 8em;
+  font-size: 6em;
   font-weight: 900;
   color: var(--gray-500);
 }
 
 main .intro .intro-content .message-group .description {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 700;
   color: var(--gray-500);
 }
@@ -304,8 +317,47 @@ main .intro .intro-content .redirect button {
 
 main .intro-content .logo {
   position: absolute;
+  display: none;
   right: 0;
-  width: 100em;
+  width: 70em;
+}
+
+@media(min-width: 640px) {
+  main .intro .intro-content .message-group {
+    width: 70%;
+  }
+  
+  main .intro .intro-content .message-group header {
+    font-size: 5.5em;
+  }
+  
+  main .intro .intro-content .message-group .description {
+    font-size: 4.5em;
+  }
+}
+
+@media(min-width: 1024px) {
+  main .intro .intro-content .message-group {
+    width: 50%;
+  }
+
+  main .intro-content .logo {
+    display: flex;
+  }
+}
+
+@media(min-width: 1280px) {
+  main .intro-content .logo {
+    width: 100em;
+  }
+
+  main .intro .intro-content .message-group header {
+    font-size: 7em;
+  }
+  
+  main .intro .intro-content .message-group .description {
+    font-size: 5.5em;
+  }
 }
 
 /* Pubmats */
@@ -313,11 +365,11 @@ main .pubmats {
   min-height: 100vh;
   background-color: var(--gray-500);
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   justify-content: center;
   align-items: center;
   gap: 4em;
-  padding: 0 4em;
+  padding: 2em 4em;
 }
 
 main .pubmats .pubmat {
@@ -334,6 +386,12 @@ main .pubmats .pubmat img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media(min-width: 640px) {
+  main .pubmats {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 /* Login and Register Page */
