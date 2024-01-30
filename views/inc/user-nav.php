@@ -17,15 +17,22 @@
             <a href="review-and-feedback.php">Review and Feedback</a>
             <a href="">Notifications Center</a>
         </ul>
-        <div class="user" id="user-btn">
-            <div class="user-icon">
-                <?php
-                    if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
-                        echo strtoupper(substr($_SESSION['user_name'], 0, 1));
-                    }
-                ?>
+        <div class="left-group">
+            <div class="user" id="user-btn">
+                <div class="user-group">
+                    <div class="user-icon">
+                        <?php
+                            if (isset($_SESSION['user_name']) && !empty($_SESSION['user_name'])) {
+                                echo strtoupper(substr($_SESSION['user_name'], 0, 1));
+                            }
+                        ?>
+                    </div>
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
             </div>
-            <i class="fa-solid fa-caret-down"></i>
+            <div class="icon-button" id="menu-btn">
+                <i class="fa-solid fa-bars menu"></i>
+            </div>
         </div>
     </ul>
 </div>
